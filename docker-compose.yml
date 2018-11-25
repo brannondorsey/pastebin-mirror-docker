@@ -1,0 +1,9 @@
+version: '3'
+services:
+  pastebin-mirror:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "${PASTEBIN_MIRROR_DIR}:/pastebin-mirror"
+    restart: unless-stopped
