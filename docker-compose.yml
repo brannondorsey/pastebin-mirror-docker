@@ -4,6 +4,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    environment:
+      - PYTHONUNBUFFERED=1
     volumes:
       - "${PASTEBIN_MIRROR_DIR}:/pastebin-mirror"
     restart: unless-stopped
